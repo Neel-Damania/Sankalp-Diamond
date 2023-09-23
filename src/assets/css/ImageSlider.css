@@ -1,0 +1,17 @@
+/* ImageSlider.css */
+
+.image-slider-container {
+  width: 80%; /* Adjust to your desired width */
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px; /* Set a maximum width if needed */
+  text-align: center; /* Center the content horizontally */
+}
+
+.slider-image {
+  max-width: 65%; /* Ensure the image fits within the container */
+  height: auto; /* Maintain the image's aspect ratio */
+  margin: 0 auto; /* Center the image horizontally within the container */
+}
+
+/* Additional styles can be added to customize the appearance of the slider controls, dots, etc. */
