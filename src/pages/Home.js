@@ -1,17 +1,19 @@
 import React from "react";
 import Navbar from "../components/Navbar.js";
 import ImageSlider from "../components/ImageSlider.js";
-import { Flex, Box } from "@chakra-ui/react";
-import image1 from "../assets/images/Product1.jpg";
-import image2 from "../assets/images/Product2.jpg";
-import image3 from "../assets/images/Product3.jpg";
-import image4 from "../assets/images/Product4.jpg";
+import { Box } from "@chakra-ui/react";
+
+import prod1 from "../assets/images/Prod1.png";
+
+import prod3 from "../assets/images/Prod3.png";
+import prod4 from "../assets/images/Prod4.png";
 
 const Home = () => {
-  const images = [image1, image2, image3, image4];
+  const images = [prod4, prod3, prod1];
   return (
     <Box bgColor="gray.200" h="100vh">
       <Navbar />
+
       <ImageSlider images={images} />
     </Box>
   );

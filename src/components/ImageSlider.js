@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../assets/css/ImageSlider.css";
+import { Box, Heading, Text } from "@chakra-ui/react";
 
 const ImageSlider = ({ images }) => {
   const settings = {
@@ -16,20 +17,40 @@ const ImageSlider = ({ images }) => {
   };
 
   return (
-    <div className="image-slider-container">
-      <Slider {...settings}>
+    <Box position="relative">
+      <Slider {...settings} className="image-slider">
         {images.map((imageUrl, index) => (
           <div key={index}>
-            <img
-              src={imageUrl}
-              alt={`Image ${index + 1}`}
-              className="slider-image"
-            />
+            <div className="image-container">
+              <img
+                src={imageUrl}
+                alt={`Image ${index + 1}`}
+                className="slider-image"
+              />
+              <div className="slick-dots-container">
+                <ul className="slick-dots" />
+              </div>
+              <div className="image-overlay">
+                <div className="construction-text">
+                  <Heading
+                    as="h1"
+                    size="lg"
+                    fontSize={{ base: "l", md: "4xl" }}
+                    color="white"
+                  >
+                    Website Under Construction
+                  </Heading>
+                  <Text as="i" fontSize={{ base: "lg", md: "4xl" }}>
+                    Our team is working hard to bring you an amazing experience.
+                    Stay tuned for updates!
+                  </Text>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </Slider>
-    </div>
+    </Box>
   );
 };
-
 export default ImageSlider;
